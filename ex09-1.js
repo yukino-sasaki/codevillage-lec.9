@@ -11,7 +11,7 @@ addbutton.addEventListener('click', (event) => {
         const newli = document.createElement('li')
         const countadd = document.createElement('span')
 
-        let num = 1;
+        var num = 1;
         document.getElementById('add').addEventListener('click', () => {
             num++;
             countadd.textContent = num;
@@ -30,11 +30,17 @@ const remove = document.getElementById('remove');
 remove.addEventListener('click', () => {
     list.removeChild(list.firstChild)
     //追加を押した回数と削除を押した回数をひかくする プログラムを作る予定
-    let renum = 1;
+    var renum = 1;
     document.getElementById('remove').addEventListener('click', () => {
         renum++;
         return renum;
     });
+    var num = 1;
+    document.getElementById('add').addEventListener('click', () => {
+        num++;
+        countadd.textContent = num;
+        return num;
+    })
 
     if (renum > num) {
         ;
